@@ -28,6 +28,15 @@ class User {
         }
         return('student not found!')
     }
+    deleteBy(deleteBy, value) {
+        for(let i = 0; i < this.#students.length; ++i) {
+            if(this.#students[i][deleteBy] === value) {
+                delete this.#students[i];
+                return 'success';
+            }
+        }
+        return ('student not found');
+    }
 }
 
 module.exports = User;

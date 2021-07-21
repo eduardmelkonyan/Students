@@ -31,13 +31,8 @@ app.get('/student/:searchBy/:value', (req, res) => {
 })
 
 app.delete('/student/:deleteBy/:value', (req, res) => {
-    for(let i = 0; i < students.length; ++i){
-    if(students[i][req.params.deleteBy] === req.params.value) {
-        delete (students[i]);
-        return res.send('success')
-    }
-}
-return res.send('student not found!')
+    user.deleteBy(req.params.deleteBy, req.params.value)
+    res.send('success')
 })
 
 app.put('/student/:searchByValue', (req, res) =>{
