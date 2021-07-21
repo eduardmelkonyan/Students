@@ -20,8 +20,8 @@ app.get('/student', (req,res) => {
 })
 
 app.get('/student/:searchBy/:value', (req, res) => {
-    user.searchByValue(req.params.searchBy, req.params.value);
-    res.send('ookk');
+    user.searchBy(req.params.searchBy, req.params.value);
+    res.send(user.searchBy(req.params.searchBy, req.params.value));
     // for(let i = 0; i < students.length; ++i){
     //     if(students[i][req.params.searchBy] === req.params.value) {
     //         return res.send(user.#students[i]);

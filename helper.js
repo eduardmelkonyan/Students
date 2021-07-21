@@ -4,6 +4,7 @@ const error = new Error();
 class User {
     constructor(){};
     #students = [];
+    #arr = [];
     get showAll() {
         return this.#students
     }
@@ -22,7 +23,7 @@ class User {
     searchBy(searchBy, value){
         for(let i = 0; i < this.#students.length; ++i){
             if(this.#students[i][searchBy] === [value]){
-                return this.#students[i];
+                return this.#students;
             }
         }
         return('student not found!')
