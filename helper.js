@@ -22,8 +22,8 @@ class User {
     }
     searchBy(searchBy, value){
         for(let i = 0; i < this.#students.length; ++i){
-            if(this.#students[i][searchBy] === [value]){
-                return this.#students;
+            if(this.#students[i][searchBy] === value){
+                return this.#students[i];
             }
         }
         return('student not found!')
